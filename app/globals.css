@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  --apple-padding-bottom: env(safe-area-inset-bottom);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* 极简 Notion/iOS 风格 */
+.card {
+  @apply bg-white rounded-2xl border border-gray-100 shadow-sm;
+}
+
+.btn-primary {
+  @apply bg-gray-900 text-white rounded-xl px-5 py-3 text-sm font-medium w-full transition active:scale-95;
+}
+
+.btn-secondary {
+  @apply bg-gray-100 text-gray-700 rounded-xl px-4 py-2 text-sm font-medium transition active:scale-95;
+}
+
+.input-field {
+  @apply w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-300 transition;
+}
+
+.label {
+  @apply text-xs text-gray-400 uppercase tracking-wide mb-2 block;
+}
+
+.safe-area-pb {
+  padding-bottom: max(0.5rem, var(--apple-padding-bottom));
+}
